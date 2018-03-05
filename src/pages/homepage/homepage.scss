@@ -1,0 +1,15 @@
+page-homepage {
+	ion-content, .content-ios {
+		background: $dj-gray;
+	}
+
+	ion-header {
+		ion-navbar {
+			button {
+				ion-icon {
+					color: $dj-gray;
+				}
+			}
+		}
+	}
+}
