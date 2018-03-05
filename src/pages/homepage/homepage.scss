@@ -3,6 +3,23 @@ page-homepage {
 		background: $dj-gray;
 	}
 
+	ion-content {
+		ion-card {
+			&.welcome-card {
+				padding: 130px 15px;
+				background: linear-gradient(to bottom, #dcc037, rgba(216, 175, 25, 0.1), transparent);
+				box-shadow: none;
+				margin: 0px;
+    			width: 100%;
+
+				button {
+				    margin: 40px 0;
+    				padding: 35px;
+				}
+			}
+		}
+	}
+
 	ion-header {
 		ion-navbar {
 			button {

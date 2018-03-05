@@ -4,8 +4,9 @@
 // Font path is used to include ionicons,
 // roboto, and noto sans fonts
 $font-path: "../assets/fonts";
-$dj-gold: #d8c540;
-$dj-gray: #3c3c3c;
+$dj-gold: #dcc037;
+$dj-gray: #404040	;
+$dj-shade: #7d5050;
 
 // The app direction is used to include
 // rtl styles in your app. For more info, please see:
@@ -40,8 +41,9 @@ $colors: (
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222,
-  dj-light-shade: #ffffff,
-  dj-shade: #000000
+  dj-gray: $dj-gray,
+  dj-shade: $dj-shade,
+  dj-gold: $dj-gold
 );
 
 
@@ -57,7 +59,7 @@ $colors: (
 // Material Design only Sass variables can go here
 
 $toolbar-background: $dj-gold;
-$toolbar-ios-title-text-color: white;
+$toolbar-ios-title-text-color: $dj-gray;
 
 
 
