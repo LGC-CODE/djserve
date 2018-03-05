@@ -3,6 +3,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav } from 'ionic-angular';
 
 import { HomePage } from '../pages/homepage/homepage';
+import { RegisterPage } from '../pages/homepage/register/register';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -28,7 +29,8 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'RadioLite', component: HomePage }
+      { title: 'RadioLite', component: HomePage },
+      { title: 'Register', component: RegisterPage }
     ];
   }
 

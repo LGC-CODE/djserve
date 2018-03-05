@@ -1,0 +1,40 @@
+page-register {
+	ion-content {
+		&.register-page {
+			background: $dj-gray;
+		}
+
+		ion-list {
+
+			&.list-ios .item-block .item-inner {
+				border-bottom: 0.55px solid $dj-gold;
+			}
+
+			ion-item {
+				background-color: rgb(37, 37, 37);
+
+				&.item.item-block.item-ios.item-input.item-label-stacked {
+					background: linear-gradient(to right, $dj-shade, $dj-shade, transparent);
+					padding: 15px;
+
+					&:first-child {
+						border-top: 0.55px solid $dj-gold;
+					}
+					&:last-child {
+						border-bottom: 0.55px solid $dj-gold;
+					}
+				}
+
+				ion-input {
+					input.text-input {
+						color: white;
+
+						&::placeholder {
+							color: rgba(255, 255, 255, 0.5);
+						}
+					}
+				}
+			}
+		}
+	}
+}
