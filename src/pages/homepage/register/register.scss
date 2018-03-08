@@ -1,3 +1,5 @@
+$dj-shade-fade-right: linear-gradient(to right, $dj-shade, $dj-shade, transparent);
+
 page-register {
 	ion-content {
 		&.register-page {
@@ -6,15 +8,24 @@ page-register {
 
 		ion-list {
 
-			&.list-ios .item-block .item-inner {
+			.item-block .item-inner {
 				border-bottom: 0.55px solid $dj-gold;
 			}
 
+			&.list-ios, &.list-md {
+				margin: 0;
+				padding: 70px 10px 200px;
+				background: $dj-shade-fade-right;
+			}
+
 			ion-item {
-				background-color: rgb(37, 37, 37);
+
+				&.item-ios, &.item-md {
+					background: $dj-shade-fade-right;
+				}
 
 				&.item.item-block.item-ios.item-input.item-label-stacked {
-					background: linear-gradient(to right, $dj-shade, $dj-shade, transparent);
+					background: $dj-shade-fade-right;
 					padding: 15px;
 
 					&:first-child {
@@ -23,6 +34,10 @@ page-register {
 					&:last-child {
 						border-bottom: 0.55px solid $dj-gold;
 					}
+				}
+
+				&  {
+					padding: 25px 0.5em;
 				}
 
 				ion-input {
