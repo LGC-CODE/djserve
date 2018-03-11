@@ -1,0 +1,69 @@
+@import '~_variables.scss';
+
+:host {
+	position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 265px;
+    height: 340px;
+
+	.um-btn-navbar {
+		@include btn-goldVelvet;
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		top: 0;
+		right: 0;
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+
+		&.cash {
+			@include btn-whiteVelvet;
+			left: 80px;
+			padding: 5%;
+
+			.um-nav-text {
+				color: $velvet-white;
+			}
+		}
+
+		.um-icon {
+			font-size: 135%;
+		}
+
+		.um-nav-text {
+			position: absolute;
+			right: 70px;
+			top: 15px;
+		}
+	}
+
+	#collapseMenu {
+		position: absolute;
+		right: 50px;
+		top: 50px;
+
+		.list-group-item.active {
+			background: $velvet-white;
+			color: $velvet-red;
+			border-color: $velvet-red
+		}
+
+		&.collapse {
+			display: block;
+			visibility: hidden;
+			opacity: 0;
+			height: 0;
+			transition: opacity 0.3s linear, height 0.3s linear;
+
+			&.show {
+				height: 100%;
+				overflow: hidden;
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+}
