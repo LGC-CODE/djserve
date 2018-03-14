@@ -4,9 +4,11 @@
 // Font path is used to include ionicons,
 // roboto, and noto sans fonts
 $font-path: "../assets/fonts";
-$dj-gold: #dcc037;
+$dj-gold: #ded022;
 $dj-gray: #404040	;
 $dj-shade: #7d5050;
+$dj-shade-fade-right: linear-gradient(to right, $dj-shade, $dj-shade, transparent);
+
 
 // The app direction is used to include
 // rtl styles in your app. For more info, please see:
@@ -24,7 +26,11 @@ $app-direction: ltr;
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
-
+$text-input-md-highlight-color: $dj-gold;
+$label-md-text-color-focused: $dj-gold;
+$text-input-placeholder-color: white;
+$input-wp-border-color: white;
+$list-border-color: $dj-gold;
 
 
 // Named Color Variables

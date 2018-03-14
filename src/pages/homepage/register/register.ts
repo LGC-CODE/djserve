@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ProfileDetailsPage } from '../profile-details/profile-details';
 
 /**
  * Generated class for the RegisterPage page.

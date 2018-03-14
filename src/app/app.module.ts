@@ -5,6 +5,8 @@ import { MyApp } from './app.component';
 
 import { HomePage } from '../pages/homepage/homepage';
 import { RegisterPage } from '../pages/homepage/register/register';
+import { ProfileDetailsPage } from '../pages/homepage/profile-details/profile-details';
+import { NavBarComponent} from '../components/nav-bar/nav-bar';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -13,7 +15,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     HomePage,
-	RegisterPage
+	RegisterPage,
+	ProfileDetailsPage,
+	NavBarComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +27,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-	RegisterPage
+	RegisterPage,
+	ProfileDetailsPage,
+	NavBarComponent
   ],
   providers: [
     StatusBar,

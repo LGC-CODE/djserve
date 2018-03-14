@@ -7,7 +7,7 @@ page-homepage {
 		ion-card {
 			&.welcome-card {
 				padding: 130px 15px;
-				background: linear-gradient(to bottom, #dcc037, rgba(216, 175, 25, 0.1), transparent);
+				background: linear-gradient(to bottom, $dj-gold, rgba($dj-gold, 0.1), transparent);
 				box-shadow: none;
 				margin: 0px;
     			width: 100%;
