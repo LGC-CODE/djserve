@@ -6,6 +6,9 @@ import { HomePage } from '../pages/homepage/homepage';
 import { RegisterPage } from '../pages/homepage/register/register';
 import { LoginPage } from '../pages/homepage/login/login';
 import { ProfileDetailsPage } from '../pages/homepage/profile-details/profile-details';
+import { StationsPage } from '../pages/stations/stations';
+
+//services
 import { AccountsProvider } from '../providers/accounts/accounts';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -65,7 +68,10 @@ export class MyApp {
 
 	   Firebase.auth().onAuthStateChanged(
 	   		user => {
-				this.accProvider.setAccountsConfig(user);
+				if(user){
+					console.log('user', user);
+					this.accProvider.setAccountsConfig(user);
+				}
 			}
 	   );
     });
@@ -79,7 +85,7 @@ export class MyApp {
 		Firebase.auth().signOut().then(
 			() => {
 				alert('user was logged out');
-				this.accProvider.setAccountsConfig({});
+				this.accProvider.setAccountsConfig(null);
 			}
 		);
 	} else {
@@ -97,15 +103,17 @@ export class MyApp {
 
 		let accounts = [
 			{ type: 'user', title: displayName, component: null },
-			{ type: '', title: 'RadioLite', component: HomePage },
+			{ type: '', title: 'Estaciones', component: StationsPage },
       		{ type: '', title: 'Profile Details', component: ProfileDetailsPage },
 			{ type: 'logout', title: 'Logout', component: null }
 		];
 
 		this.pages = accounts;
+
+		this.nav.setRoot(this.pages[1].component);
 	} else {
 		let accounts = [
-			{ type: '', title: 'RadioLite', component: HomePage },
+			{ type: '', title: 'Inicio', component: HomePage },
 			{ type: '', title: 'Register', component: RegisterPage },
       		{ type: '', title: 'Login', component: LoginPage }
 		];

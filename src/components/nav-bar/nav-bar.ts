@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 /**
  * Generated class for the NavBarComponent component.
@@ -10,13 +10,20 @@ import { Component } from '@angular/core';
   selector: 'nav-bar',
   templateUrl: 'nav-bar.html'
 })
-export class NavBarComponent {
+export class NavBarComponent implements OnInit {
 
-  text: string;
+  @Input() navTitle;
 
+  public title;
   constructor() {
-    console.log('Hello NavBarComponent Component');
-    this.text = 'Hello World';
+
   }
+
+  ngOnInit() {
+  	console.log('title: ', this.navTitle);
+    this.title = this.navTitle;
+  }
+
+
 
 }

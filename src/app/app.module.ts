@@ -11,6 +11,7 @@ import { RegisterPage } from '../pages/homepage/register/register';
 import { LoginPage } from '../pages/homepage/login/login';
 import { ProfileDetailsPage } from '../pages/homepage/profile-details/profile-details';
 import { NavBarComponent} from '../components/nav-bar/nav-bar';
+import { StationsPage } from '../pages/stations/stations';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -23,6 +24,7 @@ import { AccountsProvider } from '../providers/accounts/accounts';
 	RegisterPage,
 	ProfileDetailsPage,
 	LoginPage,
+	StationsPage,
 	NavBarComponent
   ],
   imports: [
@@ -38,6 +40,7 @@ import { AccountsProvider } from '../providers/accounts/accounts';
 	RegisterPage,
 	ProfileDetailsPage,
 	LoginPage,
+	StationsPage,
 	NavBarComponent
   ],
   providers: [

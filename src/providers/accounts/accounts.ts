@@ -13,7 +13,7 @@ import * as Firebase from 'firebase';
 @Injectable()
 export class AccountsProvider {
 
-  public accountsInit: object = {};
+  public accountsInit;
 
   public accountsConfig = new BehaviorSubject<any>(this.accountsInit);
 
