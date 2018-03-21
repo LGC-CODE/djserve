@@ -1,0 +1,57 @@
+page-login {
+	ion-content {
+		&.register-page {
+			background: $dj-gray;
+		}
+
+		ion-list {
+
+			.item-block .item-inner {
+				border-bottom: 0.55px solid $dj-gold;
+			}
+
+			&.list-ios, &.list-md {
+				margin: 0;
+				padding: 70px 10px 150px;
+				background: $dj-shade-fade-right;
+				margin-bottom: 20px;
+			}
+
+			&.list > .item-block {
+				&:first-child {
+					border-top: 0.55px solid $dj-gold;
+				}
+
+				&:last-child {
+					border-bottom: 0.55px solid $dj-gold;
+				}
+			}
+
+			ion-item {
+
+				&.item-ios, &.item-md {
+					background: $dj-shade-fade-right;
+				}
+
+				&.item-input {
+					background: $dj-shade-fade-right;
+					padding: 15px 0;
+				}
+
+				ion-input {
+					input.text-input {
+						color: white;
+
+						&::placeholder {
+							color: rgba(255, 255, 255, 0.5);
+						}
+					}
+				}
+			}
+		}
+
+		.button {
+			color: $dj-gray;
+		}
+	}
+}

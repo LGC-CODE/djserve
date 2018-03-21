@@ -17,13 +17,9 @@
 
 		<ion-item>
 			<ion-label color="light" stacked>Clave</ion-label>
-			<ion-input type="password" [(ngModel)]="confirmPassword" placeholder="Password Input"></ion-input>
-		</ion-item>
-
-		<ion-item>
-			<ion-label color="light" stacked>Confirma tu Clave</ion-label>
 			<ion-input type="password" [(ngModel)]="password" placeholder="Password Input"></ion-input>
 		</ion-item>
+
 	</ion-list>
-	<button (click)="registerEmail(email, password, confirmPassword)" ion-button block color="dj-gold">Continuar?</button>
+	<button (click)="loginEmail(email, password)" ion-button block color="dj-gold">Entrar a mi Cuenta</button>
 </ion-content>

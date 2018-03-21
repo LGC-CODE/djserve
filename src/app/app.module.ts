@@ -2,14 +2,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { Firebase } from '@ionic-native/firebase';
 
 import { HomePage } from '../pages/homepage/homepage';
 import { RegisterPage } from '../pages/homepage/register/register';
+import { LoginPage } from '../pages/homepage/login/login';
 import { ProfileDetailsPage } from '../pages/homepage/profile-details/profile-details';
 import { NavBarComponent} from '../components/nav-bar/nav-bar';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AccountsProvider } from '../providers/accounts/accounts';
 
 @NgModule({
   declarations: [
@@ -17,11 +22,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
 	RegisterPage,
 	ProfileDetailsPage,
+	LoginPage,
 	NavBarComponent
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+	HttpModule,
+	HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -29,11 +37,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
 	RegisterPage,
 	ProfileDetailsPage,
+	LoginPage,
 	NavBarComponent
   ],
   providers: [
     StatusBar,
     SplashScreen,
+	AccountsProvider,
+	Firebase,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

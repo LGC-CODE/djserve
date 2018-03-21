@@ -13,8 +13,8 @@
 	<ion-list>
 		<ion-item>
 			<ion-label color="light" stacked>Nombre de Usuario</ion-label>
-			<ion-input type="email" placeholder="Email Input"></ion-input>
+			<ion-input [(ngModel)]="userDetails.displayName" type="email" placeholder="Usuario"></ion-input>
 		</ion-item>
 	</ion-list>
-	<button (click)="OpenDetailsPage()" ion-button block color="dj-gold">Continuar?</button>
+	<button (click)="updateProfile(userDetails)" ion-button block color="dj-gold">Continuar?</button>
 </ion-content>

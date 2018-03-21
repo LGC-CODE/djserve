@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { AudioPlayerComponent } from './audio-player/audio-player';
 import { NavBarComponent } from './nav-bar/nav-bar';
+
 @NgModule({
 	declarations: [AudioPlayerComponent,
     NavBarComponent],
