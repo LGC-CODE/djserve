@@ -2,11 +2,16 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
 import { ArticleComponent } from './views/article/article.component';
+import { WorkSamplesUploadsComponent } from './views/content-management/work-samples-uploads/work-samples-uploads.component';
+import { InstallationSamplesComponent } from './views/content-management/work-samples-uploads/installation-samples/installation-samples.component';
 
 const routes: Routes = [
 	{path: '', redirectTo: 'home', pathMatch: 'full'},
 	{path: 'home', component: HomeComponent},
-	{path: 'article', component: ArticleComponent}
+	{path: 'article', component: ArticleComponent},
+	{path: 'content-management', component: WorkSamplesUploadsComponent, children: [
+		{path: 'installation-samples', component: InstallationSamplesComponent}
+	]}
 ];
 
 //  const routes: Routes = [
