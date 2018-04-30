@@ -17,13 +17,16 @@ export class HomeComponent implements OnInit, OnDestroy {
 		this.articlesSubscription = this.articlesService.getArticles().subscribe(
 			articles => {
 				console.log(articles, 'articles?');
-				this.articles = articles.map(
-					art =>{
-						art.isLiked = window.localStorage[art._id] ? true : false;
-						console.log(window.localStorage[art._id]);
-						return art;
-					}
-				)
+				this.articles = articles as Array<any>;
+//				if(this.articles){
+//					this.articles = this.articles.map(
+//						art =>{
+//							art.isLiked = window.localStorage[art._id] ? true : false;
+//							console.log(window.localStorage[art._id]);
+//							return art;
+//						}
+//					)
+//				}
 			}
 		);
 	}
@@ -36,7 +39,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 		this.articlesService.upvoteArticle(article._id).subscribe(
 			response => {
 				article.upvotes += 1;
-				window.localStorage[article._id] = true;
+				window.localStorage[article._id] = 'true';
 				console.log(article.isLiked, 'liked? upvoted', window.localStorage[article._id]);
 			}
 		);

@@ -1,0 +1,10 @@
+@import '~_variables.scss';
+
+:host {
+	background: linear-gradient(to bottom left, #8c5956, $velvet-red, $velvet-red, #8c5956);
+    width: 100%;
+    height: 100%;
+    display: block;
+
+	
+}

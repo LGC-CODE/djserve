@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavBarComponent } from './globals/nav-bar/nav-bar.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ArticleComponent } from './views/article/article.component';
 
 
 
@@ -20,7 +21,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 	declarations: [
 		AppComponent,
 		HomeComponent,
-		NavBarComponent
+		NavBarComponent,
+		ArticleComponent
 	],
 	imports: [
 		BrowserModule,
