@@ -10,6 +10,14 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 	private articlesSubscription;
 	public articles: object;
+	public products = [
+		{name: 'Banners - Rotulos'},
+		{name: 'Stickers'},
+		{name: 'Signs - Letreros'},
+		{name: 'Comming Soon...'},
+		{name: 'Comming Soon...'},
+		{name: 'Comming Soon...'}
+	]
 
 	constructor(private articlesService: ArticlesService) { }
 

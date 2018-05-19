@@ -16,26 +16,25 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-sm-12 col-md-12 col-lg-12" *ngIf="articles">
-			<div class="card bg-dark text-white um-blog">
-				<div class="card-img-overlay">
-					<div class="card-columns">
-					  <div class="card" *ngFor="let card of articles; let idx = index;">
-						<img class="card-img-top" [src]="card.img0" alt="Card image cap">
-						<div class="card-body">
-						  <h5 class="card-title" [innerHTML]="card.title"></h5>
-						  <p class="card-text">{{ card.para0.split(' ').slice(0,10).join(' ') + '...' }}</p>
-						  <p class="card-text"><small class="text-muted" [innerHTML]="card.data"></small></p>
-						</div>
-						<div class="card-footer">
-							<a href="http://universalmagazine.net/single/#!/home/{{card._id}}" class="btn btn-dark">Ver Articulo</a>
-							<button [hidden]="card.isLiked" (click)="upvoteArticle(card); card.isLiked =! card.isLiked" class="btn btn-dark"><span class="ion-thumbsup"></span>( {{card.upvotes}} )</button>
-							<button [hidden]="!card.isLiked" (click)="downvoteArticle(card); card.isLiked =! card.isLiked" class="btn btn-light"><span class="ion-thumbsup"></span>( {{card.upvotes}} )</button>
-						</div>
-					  </div>
+	</div>
+</div>
+
+<section id="gallery" class="parallax-section">
+		<div class="container pt-5 pb-5">
+			<div class="row">
+				<div class="iso-box breakfast pizza lunch col-md-4 col-sm-6 pb-3 pt-3" *ngFor="let product of products; let idx = index;">
+					<div class="gallery-thumb">
+						<a [attr.href]="'mailto:universalmagazine@yahoo.com'" data-lightbox-gallery="food-gallery">
+							<img [src]="'/assets/views/home/gallery-img' + (idx + 1) +'.jpg'" class="fluid-img img-thumbnail" alt="Gallery">
+								<div class="gallery-overlay">
+									<div class="gallery-item">
+										<i class="ion-email"></i>
+										<h3>{{product.name}}</h3>
+									</div>
+								</div>
+						</a>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
+	</section>

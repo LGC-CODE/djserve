@@ -4,11 +4,16 @@ import { HomeComponent } from './views/home/home.component';
 import { ArticleComponent } from './views/article/article.component';
 import { WorkSamplesUploadsComponent } from './views/content-management/work-samples-uploads/work-samples-uploads.component';
 import { InstallationSamplesComponent } from './views/content-management/work-samples-uploads/installation-samples/installation-samples.component';
+import { InstallationsComponent } from './views/samples/installations/installations.component';
+import { SamplesComponent } from './views/samples/samples.component';
 
 const routes: Routes = [
 	{path: '', redirectTo: 'home', pathMatch: 'full'},
 	{path: 'home', component: HomeComponent},
 	{path: 'article', component: ArticleComponent},
+	{path: 'samples', component: SamplesComponent, children: [
+		{path: 'installations', component: InstallationsComponent}
+	]},
 	{path: 'content-management', component: WorkSamplesUploadsComponent, children: [
 		{path: 'installation-samples', component: InstallationSamplesComponent}
 	]}

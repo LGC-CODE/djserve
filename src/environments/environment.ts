@@ -7,7 +7,7 @@ var config = {
   authDomain: "universe-6d5d8.firebaseapp.com",
   databaseURL: "https://universe-6d5d8.firebaseio.com",
   projectId: "universe-6d5d8",
-  storageBucket: "",
+  storageBucket: "gs://universe-6d5d8.appspot.com",
   messagingSenderId: "790913297512"
 };
 
