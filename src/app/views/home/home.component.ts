@@ -14,9 +14,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 		{name: 'Banners - Rotulos'},
 		{name: 'Stickers'},
 		{name: 'Signs - Letreros'},
-		{name: 'Comming Soon...'},
-		{name: 'Comming Soon...'},
-		{name: 'Comming Soon...'}
+		{name: 'Coming Soon...'},
+		{name: 'Coming Soon...'},
+		{name: 'Coming Soon...'}
 	]
 
 	constructor(private articlesService: ArticlesService) { }
