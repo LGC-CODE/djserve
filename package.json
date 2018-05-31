@@ -8,8 +8,7 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod"
+    "e2e": "ng e2e"
   },
   "engines": {
     "node": "9.5.0",
@@ -39,6 +38,7 @@
     "typescript": "~2.5.3"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^0.6.7",
     "@angular/cli": "^6.0.5",
     "@angular/compiler-cli": "^5.2.11",
     "@angular/language-service": "^5.2.0",

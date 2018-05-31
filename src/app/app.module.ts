@@ -9,33 +9,34 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './views/home/home.component';
 
 // Services
-import { ArticlesService } from './services/articles.service';
+
+
+//Components
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { NavBarComponent } from './globals/nav-bar/nav-bar.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { ArticleComponent } from './views/article/article.component';
-import { WorkSamplesUploadsComponent } from './views/content-management/work-samples-uploads/work-samples-uploads.component';
-import { InstallationSamplesComponent } from './views/content-management/work-samples-uploads/installation-samples/installation-samples.component';
-import { InstallationsComponent } from './views/samples/installations/installations.component';
-import { SamplesComponent } from './views/samples/samples.component';
+import { SlidesComponent } from './views/slides/slides.component';
+import { SlideOneComponent } from './views/slides/slide-one/slide-one.component';
+import { SlideTwoComponent } from './views/slides/slide-two/slide-two.component';
+import { SlideThreeComponent } from './views/slides/slide-three/slide-three.component';
+import { SlideFourComponent } from './views/slides/slide-four/slide-four.component';
 
 
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		HomeComponent,
 		NavBarComponent,
-		ArticleComponent,
-		WorkSamplesUploadsComponent,
-		InstallationSamplesComponent,
-		InstallationsComponent,
-		SamplesComponent
+		SlidesComponent,
+		SlideOneComponent,
+		SlideTwoComponent,
+		SlideThreeComponent,
+		SlideFourComponent
 	],
 	imports: [
 		BrowserModule,
@@ -48,7 +49,6 @@ import { SamplesComponent } from './views/samples/samples.component';
 		NgbModule
 	],
 	providers: [
-		ArticlesService
 	],
 	bootstrap: [AppComponent]
 })

@@ -1,21 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './views/home/home.component';
-import { ArticleComponent } from './views/article/article.component';
-import { WorkSamplesUploadsComponent } from './views/content-management/work-samples-uploads/work-samples-uploads.component';
-import { InstallationSamplesComponent } from './views/content-management/work-samples-uploads/installation-samples/installation-samples.component';
-import { InstallationsComponent } from './views/samples/installations/installations.component';
-import { SamplesComponent } from './views/samples/samples.component';
+import { SlidesComponent } from './views/slides/slides.component';
+import { SlideOneComponent } from './views/slides/slide-one/slide-one.component';
+import { SlideTwoComponent } from './views/slides/slide-two/slide-two.component';
+import { SlideThreeComponent } from './views/slides/slide-three/slide-three.component';
+import { SlideFourComponent } from './views/slides/slide-four/slide-four.component';
 
 const routes: Routes = [
 	{path: '', redirectTo: 'home', pathMatch: 'full'},
-	{path: 'home', component: HomeComponent},
-	{path: 'article', component: ArticleComponent},
-	{path: 'samples', component: SamplesComponent, children: [
-		{path: 'installations', component: InstallationsComponent}
-	]},
-	{path: 'content-management', component: WorkSamplesUploadsComponent, children: [
-		{path: 'installation-samples', component: InstallationSamplesComponent}
+	{path: 'home', component: SlidesComponent, children: [
+		{path: '', redirectTo: 'slide-one', pathMatch: 'full'},
+		{path: 'slide-one', component: SlideOneComponent},
+		{path: 'slide-two', component: SlideTwoComponent},
+		{path: 'slide-three', component: SlideThreeComponent},
+		{path: 'slide-four', component: SlideFourComponent}
 	]}
 ];
 
