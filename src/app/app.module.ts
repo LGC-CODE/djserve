@@ -20,23 +20,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavBarComponent } from './globals/nav-bar/nav-bar.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { SlidesComponent } from './views/slides/slides.component';
-import { SlideOneComponent } from './views/slides/slide-one/slide-one.component';
-import { SlideTwoComponent } from './views/slides/slide-two/slide-two.component';
-import { SlideThreeComponent } from './views/slides/slide-three/slide-three.component';
-import { SlideFourComponent } from './views/slides/slide-four/slide-four.component';
 
 
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		NavBarComponent,
-		SlidesComponent,
-		SlideOneComponent,
-		SlideTwoComponent,
-		SlideThreeComponent,
-		SlideFourComponent
+		NavBarComponent
 	],
 	imports: [
 		BrowserModule,
